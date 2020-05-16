@@ -25,6 +25,7 @@ createSquare() {
     searchSquare(xpos, ypos, xpos_end, ypos_end, itemColor)
 }
 
+; Rebind key's only while in RuneLite
 #IfWinActive, ahk_exe RuneLite.exe
     1::
         ; "Spam" left click to thieve cakes
