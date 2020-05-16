@@ -19,7 +19,7 @@ searchSquare(xpos, ypos, xpos_end, ypos_end, itemColor) {
 createSquare() {
     ; Create square from start position
     MouseGetPos, xpos, ypos
-    itemColor := 0xE1DDDC
+    itemColor := 0xE1DDDC ; Some shaded white color for cake topping
     xpos_end := xpos + 18
     ypos_end := ypos + 18
     searchSquare(xpos, ypos, xpos_end, ypos_end, itemColor)
