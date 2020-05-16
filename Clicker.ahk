@@ -1,13 +1,14 @@
+^1::Reload
+
+^2::ExitApp
+
 #IfWinActive, ahk_exe RuneLite.exe
     1::
         while (1) {
-            Random, rand, 200, 550
-            Click
-            Sleep, %rand%
+            Random, rand, 200, 700 ; Set new random sleep
+            Click ; Click left mouse
+            Sleep, %rand% ; Sleep for random time %rand% 
         }
     Return
     
     
-    2::Reload
-    
-    3::ExitApp
