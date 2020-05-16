@@ -1,0 +1,1 @@
+#IfWinActive, ahk_exe RuneLite.exe
