@@ -1,6 +1,6 @@
-!1::Reload
+!1::Reload ; Alt + 1
 
-!2::ExitApp
+!2::ExitApp ; Alt + 2
 
 searchSquare(xpos, ypos, xpos_end, ypos_end, itemColor) {
     ; Check if color (with variation of 20) exists in square

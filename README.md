@@ -7,7 +7,7 @@ To get started fork and clone this repository into your local machine.
 
 ### Prerequisites
 
-You will need to download and install [AutoHotkey](https://www.autohotkey.com/)
+You will need to download and install [AutoHotkey](https://www.autohotkey.com/) additionally the scripts were written in such a way that the hotkey's only work while in Runelite.exe [Runelite](https://runelite.net/)
 
 ## Authors
 
