@@ -2,6 +2,16 @@
 
 !2::ExitApp ; Alt + 2
 
+clickChaosAltar() {
+    Random, rand, 200, 450 ; Set new random sleep
+    chaos_xpos :=
+    chaos_ypos :=
+    
+    MouseMove, chaos_xpos, chaos_ypos
+    Sleep, %rand% 
+    Click
+}
+
 searchSquare(xpos, ypos, xpos_end, ypos_end, itemColor) {
     ; Check if color (with variation of 20) exists in square
     PixelSearch, OutputVarX, OutputVarY, xpos, ypos, xpos_end, ypos_end, itemColor, 20, Fast RGB
@@ -12,10 +22,7 @@ searchSquare(xpos, ypos, xpos_end, ypos_end, itemColor) {
         MouseMove, OutputVarX, OutputVarY
         Click
         
-        ;; Chaos altar cords
-        ;; Small sleep
-        
-        Click
+        clickChaosAltar()
     }
 }
 
