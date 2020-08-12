@@ -1,6 +1,6 @@
-^1::Reload
+!1::Reload
 
-^2::ExitApp
+!2::ExitApp
 
 #IfWinActive, ahk_exe RuneLite.exe
     1::
