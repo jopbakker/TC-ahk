@@ -40,32 +40,32 @@ createSquare() {
     1::
         ; Loop through inventory and drop any items that are not cakes
         Click
-        MouseGetPos, inv_xpos, inv_ypos
+        MouseGetPos, inv_xpos, inv_ypos ; Save current invent spot to go back to after clicking altar
         createSquare()
-        MouseMove, inv_xpos, inv_ypos
+        MouseMove, inv_xpos, inv_ypos ; Return to original inv spot
         loop, 2{
             loopcount++
             loop, 6 { ;Loop first row
                 MouseMove, 0, 36, %speed%, R
-                MouseGetPos, inv_xpos, inv_ypos
+                MouseGetPos, inv_xpos, inv_ypos ; Save current invent spot to go back to after clicking altar
                 createSquare()
-                MouseMove, inv_xpos, inv_ypos
+                MouseMove, inv_xpos, inv_ypos ; Return to original inv spot
             }
             MouseMove, 40, 0, %speed%, R ;Move over 1 row
-            MouseGetPos, inv_xpos, inv_ypos
+            MouseGetPos, inv_xpos, inv_ypos ; Save current invent spot to go back to after clicking altar
             createSquare()
-            MouseMove, inv_xpos, inv_ypos
+            MouseMove, inv_xpos, inv_ypos ; Return to original inv spot
             loop, 6 { ;Loop back up
                 MouseMove, 0, -36, %speed%, R
-                MouseGetPos, inv_xpos, inv_ypos
+                MouseGetPos, inv_xpos, inv_ypos ; Save current invent spot to go back to after clicking altar
                 createSquare()
-                MouseMove, inv_xpos, inv_ypos
+                MouseMove, inv_xpos, inv_ypos ; Return to original inv spot
             }
             if (loopcount < 2){ ; Make sure mouse does not move out of inv in last loop
                 MouseMove, 40, 0, %speed%, R ;Move over 1 row
             }
-            MouseGetPos, inv_xpos, inv_ypos
+            MouseGetPos, inv_xpos, inv_ypos ; Save current invent spot to go back to after clicking altar
             createSquare()
-            MouseMove, inv_xpos, inv_ypos
+            MouseMove, inv_xpos, inv_ypos ; Return to original inv spot
         }
     Return
