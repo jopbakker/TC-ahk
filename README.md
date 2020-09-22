@@ -1,13 +1,15 @@
 # Autohotkey
 Repository of Autohotkey scripts made by Jop Bakker for use in [Old School RuneScape](https://oldschool.runescape.com/)
 
+## Prerequisites
+
+You will need to download and install [AutoHotkey](https://www.autohotkey.com/) additionally the scripts were written in such a way that the hotkey's only work while in Runelite.exe [Runelite](https://runelite.net/)
+
 ## Getting Started
 
 To get started fork and clone this repository into your local machine.
+Set Runelite to 1400x800
 
-### Prerequisites
-
-You will need to download and install [AutoHotkey](https://www.autohotkey.com/) additionally the scripts were written in such a way that the hotkey's only work while in Runelite.exe [Runelite](https://runelite.net/)
 
 ## Authors
 
