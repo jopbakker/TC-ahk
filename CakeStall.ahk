@@ -26,15 +26,15 @@ createSquare() {
 }
 
 ; Rebind key's only while in RuneLite
-;#IfWinActive, ahk_exe RuneLite.exe
-1::
-    ; "Spam" left click to thieve cakes
-    while (1) {
-        Random, rand, 200, 700 ; Set new random sleep
-        Click ; Click left mouse
-        Sleep, %rand% ; Sleep for random time %rand% 
-    }
-Return
+#IfWinActive, ahk_exe RuneLite.exe
+    1::
+        ; "Spam" left click to thieve cakes
+        while (1) {
+            Random, rand, 200, 700 ; Set new random sleep
+            Click ; Click left mouse
+            Sleep, %rand% ; Sleep for random time %rand% 
+        }
+    Return
 
 2::
     ; Loop through inventory and drop any items that are not cakes

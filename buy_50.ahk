@@ -3,6 +3,7 @@
 !2::ExitApp
 
 #IfWinActive, ahk_exe RuneLite.exe
+    ; Buys 50 of the item currently "selected"
     1::
     Numpad1::
     RButton::
