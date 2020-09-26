@@ -1,4 +1,4 @@
-; create time time: 49 sec
+; See https://github.com/J-P-Bakker/TC-ahk/blob/master/Screenshots/wine_telegrap.png
 
 !1::Reload
 

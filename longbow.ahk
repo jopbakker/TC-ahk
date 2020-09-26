@@ -1,5 +1,3 @@
-; create time time: 49 sec
-
 !1::Reload
 
 !2::ExitApp

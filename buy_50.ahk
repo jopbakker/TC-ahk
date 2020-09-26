@@ -7,8 +7,8 @@
     1::
     Numpad1::
     RButton::
-        Random, xSway, -20, 20
-        Random, ySway, 80, 88
+        Random, xSway, -10, 10
+        Random, ySway, 40, 45
         Click, Right
         MouseMove, %xSway%, %ySway%, 4, R
         Click
