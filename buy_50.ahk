@@ -6,9 +6,8 @@
     ; Buys 50 of the item currently "selected"
     1::
     Numpad1::
-    RButton::
         Random, xSway, -10, 10
-        Random, ySway, 40, 45
+        Random, ySway, 80, 85
         Click, Right
         MouseMove, %xSway%, %ySway%, 4, R
         Click

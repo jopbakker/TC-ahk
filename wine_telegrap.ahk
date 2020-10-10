@@ -33,6 +33,7 @@ telegrap() {
     Random, rand, 100, 250 ; Set new random sleep
     Sleep, %rand%
 
+    ; Return to telegrap spell
     square := createsquare(1265,580)
     MouseMove, square.x, square.y, 13
 }
