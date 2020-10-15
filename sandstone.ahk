@@ -24,7 +24,7 @@ rockOneStart() {
 
 rockTwo() {
     ; Mine rock two from rock one position
-    square := createsquare(610,458)
+    square := createsquare(613,458)
     MouseMove, square.x, square.y, 4
     click
 }

@@ -1,4 +1,4 @@
-; See https://github.com/J-P-Bakker/TC-ahk/blob/master/Screenshots/wine_telegrap.png
+; See https://github.com/J-P-Bakker/TC-ahk/blob/master/Screenshots/wine_telegrab.png
 
 !1::Reload
 
