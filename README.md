@@ -8,7 +8,7 @@ You will need to download and install [AutoHotkey](https://www.autohotkey.com/) 
 ## Getting Started
 
 To get started fork and clone this repository into your local machine.
-Set Runelite to 1400x800
+Set Runelite to 1340x800
 
 
 ## Authors
