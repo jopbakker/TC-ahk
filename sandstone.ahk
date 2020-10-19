@@ -17,7 +17,7 @@ createsquare(xpos, ypos) {
 
 rockOneStart() {
     ; Mine rock one from NPC
-    square := createsquare(1080,255)
+    square := createsquare(1085,254)
     MouseMove, square.x, square.y, 4
     click
 }
