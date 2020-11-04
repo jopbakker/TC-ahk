@@ -6,7 +6,7 @@
 1::
     ; "spam" clicks the current mouse position
     while (1) {
-        Random, rand, 200, 450 ; Set new random sleep
+        Random, rand, 150, 220 ; Set new random sleep
         Click ; Click left mouse
         Sleep, %rand% ; Sleep for random time %rand% 
     }

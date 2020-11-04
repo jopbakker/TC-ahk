@@ -55,7 +55,7 @@ bank() {
 #IfWinActive, ahk_exe RuneLite.exe
     ; Line up marker 3 (Bank) with bank
     1::
-        while(1) { ; Unf potions
+        while(1) {
             Random, rand, 400, 650 ; Set new random sleep
             withdraw()
             Sleep, %rand%
