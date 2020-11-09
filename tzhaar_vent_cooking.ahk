@@ -15,8 +15,8 @@ createsquare(xpos, ypos) {
 }
 
 withdraw() {
-    ; Withdraw
-    square := createsquare(605,365)
+    ; Withdraw from the top right slot in bank
+    square := createsquare(700,110)
     MouseMove, square.x, square.y, 4
     click
 }
@@ -37,6 +37,7 @@ make() {
 }
 
 bank() {
+    ; Click bank chest
     square := createsquare(850,363)
     MouseMove, square.x, square.y, 4
     click
@@ -54,6 +55,8 @@ bank() {
     ; Runelite size 1340x800
     ; Face north, zoom max, face top down
     ; Make sure the food type is on "space" to cook
+    ; food: 66750, 69000
+    ; giant seeweed: 7550, 8200
     1::
         while(1) {
             Random, rand, 300, 500 ; Set new random sleep
@@ -65,7 +68,7 @@ bank() {
             Random, rand, 650, 950 ; Set new random sleep
             Sleep, %rand%
             Send, {Space}
-            Random, rand, 66750, 69000 ; Set new random sleep
+            Random, rand, 7750, 8200 ; Set new random sleep
             Sleep, %rand%
             bank()
             Random, rand, 500, 800 ; Set new random sleep
