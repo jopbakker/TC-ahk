@@ -2,9 +2,9 @@
 
 !2::ExitApp
 
-;IfWinActive, ahk_exe RuneLite.exe
 1::
-    ; "spam" clicks the current mouse position
+    If WinActive("ahk_exe RuneLite.exe") || WinActive("ahk_exe OpenOSRS.exe")
+        ; "spam" clicks the current mouse position
     while (1) {
         Random, rand, 150, 220 ; Set new random sleep
         Click ; Click left mouse

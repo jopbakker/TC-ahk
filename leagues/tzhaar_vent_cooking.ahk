@@ -68,7 +68,7 @@ bank() {
             Random, rand, 650, 950 ; Set new random sleep
             Sleep, %rand%
             Send, {Space}
-            Random, rand, 7750, 8200 ; Set new random sleep
+            Random, rand, 66750, 69000 ; Set new random sleep
             Sleep, %rand%
             bank()
             Random, rand, 500, 800 ; Set new random sleep

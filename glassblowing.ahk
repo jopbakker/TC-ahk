@@ -66,7 +66,8 @@ bank() {
             Sleep, %rand%
             Send, {Space}
 
-            ; Move "off" screen (requires sidepanel open)
+            ; Move "off" screen (requires runelite sidepanel open)
+            ; U can disable this by removing or adding comment tags ";"
             square := createsquare(1388,370)
             MouseMove, square.x, square.y, 6
             click

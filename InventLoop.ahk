@@ -1,6 +1,8 @@
 ; All below "scripts" start from the CURRENT mouse position
 
-#IfWinActive, ahk_exe RuneLite.exe
+GroupAdd, activewindow, ahk_exe RuneLite.exe
+GroupAdd, activewindow, ahk_exe OpenOSRS.exe
+#IfWinActive, ahk_group activewindow
     speed := 0
     1::
         loopcount = 0
