@@ -26,8 +26,8 @@ telegrap() {
     Sleep, %rand%
 
     ; Click wine
-    square := createsquare(40,415)
-    MouseMove, square.x, square.y, 12
+    square := createsquare(565,421)
+    MouseMove, square.x, square.y, 8
     click
 
     Random, rand, 100, 250 ; Set new random sleep

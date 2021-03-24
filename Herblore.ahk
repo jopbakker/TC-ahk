@@ -4,8 +4,8 @@
 
 createsquare(xpos, ypos) {
     ; Create square from start position
-    Random, xSway, 0, 25
-    Random, ySway, 0, 25
+    Random, xSway, 2, 20
+    Random, ySway, 2, 20
 
     xpos += %xSway%
     ypos += %ySway%
@@ -14,7 +14,7 @@ createsquare(xpos, ypos) {
     return square
 }
 
-withdraw() {
+withdraw(number) {
     ; Withdraw from marker 1
     square := createsquare(700,345)
     MouseMove, square.x, square.y, 4
@@ -22,11 +22,12 @@ withdraw() {
 
     Random, rand, 100, 250 ; Set new random sleep
     Sleep, %rand%
-
-    ; Withdraw from marker 2
-    square := createsquare(700,382)
-    MouseMove, square.x, square.y, 4
-    click
+    if(number > 1){
+        ; Withdraw from marker 2
+        square := createsquare(700,382)
+        MouseMove, square.x, square.y, 4
+        click
+    }
 }
 
 make() {
@@ -56,12 +57,46 @@ bank() {
     Click
 }
 
+inventloop(){
+    loopcount = 0
+    number = 0
+    loop, 7 {
+        loopcount++
+        number = 1
+        if(number = 1){
+            number = 0
+            Click
+            MouseMove, 36, 0, %speed%, R
+            Click
+        }
+        if (loopcount < 7){
+            MouseMove, -36, 36, %speed%, R
+        }
+    }
+    MouseMove, 45, 0, %speed%, R
+    loopcount = 0
+    loop, 7 {
+        loopcount++
+        number = 1
+        if(number = 1){
+            number = 0
+            Click
+            MouseMove, 36, 0, %speed%, R
+            Click
+        }
+        if (loopcount < 7){
+            MouseMove, -36, -36, %speed%, R
+        }
+    }
+    Return
+}
+
 #IfWinActive, ahk_exe RuneLite.exe
     ; Line up marker 3 (Bank) with bank
     1::
         while(1) { ; Unf potions
             Random, rand, 300, 500 ; Set new random sleep
-            withdraw()
+            withdraw(2)
             Sleep, %rand%
             Send, {Esc}
             Sleep, %rand%
@@ -77,7 +112,7 @@ bank() {
     2::
         while(1) { ; Complete potions
             Random, rand, 300, 500 ; Set new random sleep
-            withdraw()
+            withdraw(2)
             Sleep, %rand%
             Send, {Esc}
             Sleep, %rand%
@@ -88,4 +123,29 @@ bank() {
             Random, rand, 17000, 18000 ; Set new random sleep
             Sleep, %rand%
             bank()
+        }
+
+    3::
+        while(1) {
+            withdraw(1)
+
+            Random, rand, 300, 500 ; Set new random sleep
+            Sleep, %rand%
+
+            Send, {Esc}
+            square := createsquare(1150,543)
+
+            MouseMove, square.x, square.y, 4
+            Random, rand, 300, 500 ; Set new random sleep
+            Sleep, %rand%
+
+            inventloop()
+
+            Random, rand, 1200, 1300 ; Set new random sleep
+            Sleep, %rand%
+
+            bank()
+
+            Random, rand, 300, 500 ; Set new random sleep
+            Sleep, %rand% 
         }

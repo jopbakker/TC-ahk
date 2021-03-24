@@ -24,11 +24,10 @@ click(xpos, ypos) {
 
 weaponswitch() {
     Send, {Esc}
-    click(1214,634)
-    click(1214,671)
-    click(1259,634)
-    click(1259,671)
-    click(1299,634)
+    click(1389,542)
+    click(1389,576)
+    click(1431,542)
+    click(1431,576)
 
     Random, rand, 250, 450 ; Set new random sleep
     Sleep, %rand%
@@ -37,8 +36,8 @@ weaponswitch() {
 
 GroupAdd, activewindow, ahk_exe OpenOSRS.exe
 ;#IfWinActive, ahk_group activewindow
-1::
+F14::
     while(1){
-        KeyWait, Space, D
+        KeyWait, F13, D
         weaponswitch()
     }
