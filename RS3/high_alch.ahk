@@ -22,6 +22,6 @@ createsquare(xpos, ypos) {
         MouseMove, square.x, square.y, 4
         click
 
-        Random, rand, 3100, 3366 ; Sleep time till reheat
+        Random, rand, 2690, 2875 ; Sleep time till reheat
         Sleep, %rand%
     }
