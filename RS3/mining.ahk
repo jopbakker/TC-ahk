@@ -16,17 +16,10 @@ createsquare(xpos, ypos) {
 
 1::
     while(1) {
-        square := createsquare(870,404) ; Click anvil
+        square := createsquare(583,675) ; Click anvil
         MouseMove, square.x, square.y, 4
         click
 
-        Random, rand, 17500, 21350 ; Sleep time till reheat
-        Sleep, %rand%
-
-        square := createsquare(508,178) ; Click heater
-        MouseMove, square.x, square.y, 4
-        click
-
-        Random, rand, 1450, 2000 ; Sleep time for reheat
+        Random, rand, 13125, 14320 ; Sleep time till reheat
         Sleep, %rand%
     }

@@ -14,29 +14,23 @@ createsquare(xpos, ypos) {
     return square
 }
 
-1:: ; Glass making. Reset cords at the start of the run
+1:: ; D-hide shield
     while(1) {
-        Send, {f1}
-        Random, rand, 955, 1125 ; Set new random sleep
+        Send, {f10} ; Extract preset 1
+        Random, rand, 1550, 1750 ; Set new random sleep
         Sleep, %rand%
 
-        square := createsquare(900,546)
+        square := createsquare(523,108) ; portable crafter
         MouseMove, square.x, square.y, 4
         click
 
-        Random, rand, 875, 1105 ; Set new random sleep
+        Random, rand, 104600, 109578 ; Set new random sleep
         Sleep, %rand%
 
-        Send, {space}
-
-        Random, rand, 67500, 68750 ; Set new random sleep
-        Sleep, %rand%
-
-        square := createsquare(558,508)
+        square := createsquare(195,430) ; Click bank chest
         MouseMove, square.x, square.y, 4
         click
 
         Random, rand, 1000, 1250 ; Set new random sleep
         Sleep, %rand%
     }
-

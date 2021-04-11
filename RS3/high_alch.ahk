@@ -14,7 +14,7 @@ createsquare(xpos, ypos) {
     return square
 }
 
-1:: ; D-hide shield
+1::
     while(1) {
         Send, 0 ; Send high alch hotkey key
 
