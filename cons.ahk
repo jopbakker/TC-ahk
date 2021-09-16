@@ -21,7 +21,7 @@ build() {
     Click, Right
     MouseMove, 0, 53, 4, R
     click
-    Random, rand, 630, 655 ; Set new random sleep
+    Random, rand, 655, 701 ; Set new random sleep
     sleep %rand%
     Send, 4
 }
@@ -37,7 +37,7 @@ remove() {
 }
 
 #IfWinActive, ahk_exe RuneLite.exe
-    ; Line up marker 3 (Bank marker) with curtain
+    ; Line up marker "cons" with curtain
     6::
         while(1) {
             KeyWait, 2, D

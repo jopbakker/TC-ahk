@@ -24,7 +24,7 @@ feed() {
     Sleep, %rand%
 
     ; Withdraw from marker 1
-    square := createsquare(700,380)
+    square := createsquare(686,464)
     MouseMove, square.x, square.y, 6
     click
 }

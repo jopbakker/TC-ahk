@@ -3,9 +3,8 @@
 !2::ExitApp
 ; All below "scripts" start from the CURRENT mouse position
 
-#IfWinActive, ahk_exe OpenOSRS.exe
-    ;#IfWinActive, ahk_exe RuneLite.exe
-    speed := 0
+;#IfWinActive, ahk_exe OpenOSRS.exe
+#IfWinActive, ahk_exe RuneLite.exe
     1::
         loopcount = 0
         Click
@@ -13,17 +12,17 @@
         loop, 2{
             loopcount++
             loop, 6 { ;Loop first row
-                MouseMove, 0, 36, %speed%, R
+                MouseMove, 0, 36, 0, R
                 Click
             }
-            MouseMove, 40, 0, %speed%, R ;Move over 1 row
+            MouseMove, 40, 0, 0, R ;Move over 1 row
             Click
             loop, 6 { ;Loop back up
-                MouseMove, 0, -36, %speed%, R
+                MouseMove, 0, -36, 0, R
                 Click
             }
             if (loopcount < 2){ ; Make sure mouse does not move out of inv in last loop
-                MouseMove, 40, 0, %speed%, R ;Move over 1 row
+                MouseMove, 40, 0, 0, R ;Move over 1 row
             }
             Click
         }
@@ -36,17 +35,17 @@
         loop, 2{
             loopcount++
             loop, 5 { ;Loop first row
-                MouseMove, 0, 36, %speed%, R
+                MouseMove, 0, 36, 0, R
                 Click
             }
-            MouseMove, 40, 0, %speed%, R ;Move over 1 row
+            MouseMove, 40, 0, 0, R ;Move over 1 row
             Click
             loop, 5 { ;Loop back up
-                MouseMove, 0, -36, %speed%, R
+                MouseMove, 0, -36, 0, R
                 Click
             }
             if (loopcount < 2){ ; Make sure mouse does not move out of inv in last loop
-                MouseMove, 40, 0, %speed%, R ;Move over 1 row
+                MouseMove, 40, 0, 0, R ;Move over 1 row
             }
             Click
         }
@@ -60,17 +59,17 @@
         loop, 2{
             loopcount++
             loop, 6 { ;Loop first row
-                MouseMove, 0, 36, %speed%, R
+                MouseMove, 0, 36, 0, R
                 Click
             }
-            MouseMove, 40, 0, %speed%, R ;Move over 1 row
+            MouseMove, 40, 0, 0, R ;Move over 1 row
             Click
             loop, 6 { ;Loop back up
-                MouseMove, 0, -36, %speed%, R
+                MouseMove, 0, -36, 0, R
                 Click
             }
             if (loopcount < 2){ ; Make sure mouse does not move out of inv in last loop
-                MouseMove, 40, 0, %speed%, R ;Move over 1 row
+                MouseMove, 40, 0, 0, R ;Move over 1 row
             }
             Click
         }
@@ -85,17 +84,17 @@
         loop, 2{
             loopcount++
             loop, 5 { ;Loop first row
-                MouseMove, 0, 36, %speed%, R
+                MouseMove, 0, 36, 0, R
                 Click
             }
-            MouseMove, 40, 0, %speed%, R ;Move over 1 row
+            MouseMove, 40, 0, 0, R ;Move over 1 row
             Click
             loop, 5 { ;Loop back up
-                MouseMove, 0, -36, %speed%, R
+                MouseMove, 0, -36, 0, R
                 Click
             }
             if (loopcount < 2){ ; Make sure mouse does not move out of inv in last loop
-                MouseMove, 40, 0, %speed%, R ;Move over 1 row
+                MouseMove, 40, 0, 0, R ;Move over 1 row
             }
             Click
         }
