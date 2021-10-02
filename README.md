@@ -3,13 +3,12 @@ Repository of Autohotkey scripts made by Jop Bakker for use in [Old School RuneS
 
 ## Prerequisites
 
-You will need to download and install [AutoHotkey](https://www.autohotkey.com/) additionally the scripts were written in such a way that the hotkey's only work while in Runelite.exe [Runelite](https://runelite.net/)
+You will need to download and install [AutoHotkey](https://www.autohotkey.com/)
 
 ## Getting Started
 
-To get started fork and clone this repository into your local machine.
-Set Runelite to 1340x800
-
+Use the base.ahk to get a feel for the way this works.
+Copy what you need from base.ahk and build your own script with "variable" coordinates
 
 ## Authors
 
