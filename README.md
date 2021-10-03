@@ -1,5 +1,5 @@
 # Autohotkey
-Repository of Autohotkey scripts made by Jop Bakker for use in [Old School RuneScape](https://oldschool.runescape.com/) and [RS3](https://www.runescape.com/community)
+Repository of Autohotkey scripts made by Jop Bakker for use in [Old School RuneScape](https://oldschool.runescape.com/)
 
 ## Prerequisites
 
@@ -8,6 +8,7 @@ You will need to download and install [AutoHotkey](https://www.autohotkey.com/)
 ## Getting Started
 
 Use the base.ahk to get a feel for the way this works.
+
 Copy what you need from base.ahk and build your own script with "variable" coordinates
 
 ## Authors
