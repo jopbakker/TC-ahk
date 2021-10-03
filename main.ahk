@@ -8,7 +8,7 @@ SetControlDelay 1
 SetWinDelay 0
 SetKeyDelay -1
 SetMouseDelay 1
-SetDefaultMouseSpeed, 3
+;SetDefaultMouseSpeed, 3
 SetBatchLines -1
 CoordMode, mouse, Screen
 
@@ -40,6 +40,61 @@ return
 ExitApp
 return
 
+^1::
+hoverColor := "Red"
+add_point(points1, "Red", 25, 25)
+return
+
+^2::
+hoverColor := "Blue"
+add_point(points2, "Blue", 25, 25)
+return
+
+^3::
+hoverColor := "Green"
+add_point(points3, "Green", 25, 25)
+return
+
+^4::
+hoverColor := "Yellow"
+add_point(points4, "Yellow", 25, 25)
+return
+
+^5::
+hoverColor := "Purple"
+add_point(points5, "Purple", 25, 25)
+return
+
+^6::
+hoverColor := "Black"
+add_point(points6, "Black", 25, 25)
+return
+
+!1::
+clear_points(points1)
+return
+
+!2::
+clear_points(points2)
+return
+
+!3::
+clear_points(points3)
+return
+
+!4::
+clear_points(points4)
+return
+
+!5::
+clear_points(points5)
+return
+
+!6::
+clear_points(points6)
+return
+
+
 clear_points(ByRef points) {
 	For index, p In points
 	{
@@ -49,35 +104,44 @@ clear_points(ByRef points) {
 	points := []
 }
 
-add_point(ByRef points, color) {
-	global width, height, guiCount
+add_point(ByRef points, color, width, height) {
+	global guiCount
 	MouseGetPos, currx, curry
 	num := overlay_rect(currx, curry, width, height, 3, color)
-	;ToolTip, Added point,%currx%,%curry%
-	x1 := currx - width/2
-	x2 := currx + width/2
-	y1 := curry - height/2
-	y2 := curry + height/2
+	x1 := % currx - width/2
+	x2 := % currx + width/2
+	y1 := % curry - height/2
+	y2 := % curry + height/2
 	points.push({"x1":x1,"y1":y1,"x2":x2,"y2":y2,"gui":num})
 	
 }
 
-click_points(ByRef points) {
+lclick_points(ByRef points, speed:=6, delay:=50) {
 	;MouseGetPos, currx, curry
 	For index, p In points
 	{
-		click_box(p.x1, p.y1, p.x2, p.y2)
-		Sleep, 50
+		lclick_box(p.x1, p.y1, p.x2, p.y2, %speed%)
+		Sleep, %delay%
 	}
 	;MouseMove currx, curry
 }
 
-move_points(ByRef points) {
+rclick_points(ByRef points, speed:=6, delay:=50) {
 	;MouseGetPos, currx, curry
 	For index, p In points
 	{
-		move_box(p.x1, p.y1, p.x2, p.y2)
-		Sleep, 50
+		rclick_box(p.x1, p.y1, p.x2, p.y2, %speed%)
+		Sleep, %delay%
+	}
+	;MouseMove currx, curry
+}
+
+move_points(ByRef points, speed:=6, delay:=50) {
+	;MouseGetPos, currx, curry
+	For index, p In points
+	{
+		move_box(p.x1, p.y1, p.x2, p.y2, %speed%)
+		Sleep, %delay%
 	}
 	;MouseMove currx, curry
 }
@@ -91,8 +155,6 @@ overlay_rect(X:=0, Y:=0, W:=0, H:=0, T:=3, cc:="Red", incr:=True) {
 	txt := abs(mod(guiCount,99)+1)
 	Gui %txt%: +LastFound +AlwaysOnTop -Caption +ToolWindow +E0x08000000 +E0x80020
 	Gui %txt%: Color, %cc%
-	;Gui %txt%: Font, s32
-	;Gui %txt%: Add, Text, cLime, XXXXX YYYYY
 	Gui %txt%: Show, w%W% h%H% x%X% y%Y% NA
 
 	WinSet, Transparent, 150
@@ -128,17 +190,24 @@ start_script() {
 	height:=25
 }
 
-click_box(x1, y1, x2, y2) {
+lclick_box(x1, y1, x2, y2, speed) {
 	x += target_random(x1,(x1+x2)/2,x2)
 	y += target_random(y1,(y1+y2)/2,y2)
-	MouseMove, %x%, %y%
+	MouseMove, %x%, %y%, %speed%
 	MouseClick, Left
 }
 
-move_box(x1, y1, x2, y2) {
+rclick_box(x1, y1, x2, y2, speed) {
 	x += target_random(x1,(x1+x2)/2,x2)
 	y += target_random(y1,(y1+y2)/2,y2)
-	MouseMove, %x%, %y%
+	MouseMove, %x%, %y%, %speed%
+	MouseClick, Right
+}
+
+move_box(x1, y1, x2, y2,speed) {
+	x += target_random(x1,(x1+x2)/2,x2)
+	y += target_random(y1,(y1+y2)/2,y2)
+	MouseMove, %x%, %y%, %speed%
 }
 
 
