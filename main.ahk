@@ -98,18 +98,24 @@ lclick_points(ByRef points, speed:=6, delay:=50, rand:=False, rlow:=0, rhigh:=0)
 	;MouseMove currx, curry
 }
 
-rclick_points(ByRef points, speed:=6, delay:=50) {
+rclick_points(ByRef points, speed:=6, delay:=50, rand:=False, rlow:=0, rhigh:=0) {
 	;MouseGetPos, currx, curry
 	For index, p In points{
+		if (rand){
+			Random, delay, %rlow%, %rhigh%
+		}
 		rclick_box(p.x1, p.y1, p.x2, p.y2, speed)
 		Sleep, %delay%
 	}
 	;MouseMove currx, curry
 }
 
-move_points(ByRef points, speed:=6, delay:=50) {
+move_points(ByRef points, speed:=6, delay:=50, rand:=False, rlow:=0, rhigh:=0) {
 	;MouseGetPos, currx, curry
 	For index, p In points{
+		if (rand){
+			Random, delay, %rlow%, %rhigh%
+		}
 		move_box(p.x1, p.y1, p.x2, p.y2, speed)
 		Sleep, %delay%
 	}
