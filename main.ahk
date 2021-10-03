@@ -4,10 +4,10 @@ SetWorkingDir %A_ScriptDir%
 #SingleInstance Force
 SetTitleMatchMode 2
 #WinActivateForce
-SetControlDelay 1
-SetWinDelay 0
-SetKeyDelay -1
-SetMouseDelay 1
+;SetControlDelay 1
+;SetWinDelay 0
+;SetKeyDelay -1
+;SetMouseDelay 1
 ;SetDefaultMouseSpeed, 3
 SetBatchLines -1
 CoordMode, mouse, Screen
@@ -38,36 +38,6 @@ return
 
 ^Esc::
 ExitApp
-return
-
-^1::
-hoverColor := "Red"
-add_point(points1, "Red", 25, 25)
-return
-
-^2::
-hoverColor := "Blue"
-add_point(points2, "Blue", 25, 25)
-return
-
-^3::
-hoverColor := "Green"
-add_point(points3, "Green", 25, 25)
-return
-
-^4::
-hoverColor := "Yellow"
-add_point(points4, "Yellow", 25, 25)
-return
-
-^5::
-hoverColor := "Purple"
-add_point(points5, "Purple", 25, 25)
-return
-
-^6::
-hoverColor := "Black"
-add_point(points6, "Black", 25, 25)
 return
 
 !1::
@@ -116,11 +86,13 @@ add_point(ByRef points, color, width, height) {
 	
 }
 
-lclick_points(ByRef points, speed:=6, delay:=50) {
+lclick_points(ByRef points, speed:=6, delay:=50, rand:=False, rlow:=0, rhigh:=0) {
 	;MouseGetPos, currx, curry
-	For index, p In points
-	{
-		lclick_box(p.x1, p.y1, p.x2, p.y2, %speed%)
+	For index, p In points{
+		if (rand){
+			Random, delay, %rlow%, %rhigh%
+		}
+		lclick_box(p.x1, p.y1, p.x2, p.y2, speed)
 		Sleep, %delay%
 	}
 	;MouseMove currx, curry
@@ -128,9 +100,8 @@ lclick_points(ByRef points, speed:=6, delay:=50) {
 
 rclick_points(ByRef points, speed:=6, delay:=50) {
 	;MouseGetPos, currx, curry
-	For index, p In points
-	{
-		rclick_box(p.x1, p.y1, p.x2, p.y2, %speed%)
+	For index, p In points{
+		rclick_box(p.x1, p.y1, p.x2, p.y2, speed)
 		Sleep, %delay%
 	}
 	;MouseMove currx, curry
@@ -138,9 +109,8 @@ rclick_points(ByRef points, speed:=6, delay:=50) {
 
 move_points(ByRef points, speed:=6, delay:=50) {
 	;MouseGetPos, currx, curry
-	For index, p In points
-	{
-		move_box(p.x1, p.y1, p.x2, p.y2, %speed%)
+	For index, p In points{
+		move_box(p.x1, p.y1, p.x2, p.y2, speed)
 		Sleep, %delay%
 	}
 	;MouseMove currx, curry

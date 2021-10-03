@@ -1,5 +1,5 @@
 # Autohotkey
-Repository of Autohotkey scripts made by Jop Bakker for use in [Old School RuneScape](https://oldschool.runescape.com/) and RS3
+Repository of Autohotkey scripts made by Jop Bakker for use in [Old School RuneScape](https://oldschool.runescape.com/) and [RS3](https://www.runescape.com/community)
 
 ## Prerequisites
 
