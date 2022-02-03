@@ -26,7 +26,6 @@ createSquare() {
 }
 
 ; Rebind key's only while in RuneLite
-#IfWinActive, ahk_exe RuneLite.exe
     1::
         ; "Spam" left click to thieve cakes
         while (1) {
@@ -38,6 +37,7 @@ createSquare() {
 
 2::
     ; Loop through inventory and drop any items that are not cakes
+    loopcount = 0
     loop, 2{
         loopcount++
         loop, 6 { ;Loop first row

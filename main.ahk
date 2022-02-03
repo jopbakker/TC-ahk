@@ -36,7 +36,7 @@ if (display) {
 }
 return
 
-^Esc::
+!Esc::
 ExitApp
 return
 

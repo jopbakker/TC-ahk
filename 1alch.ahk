@@ -5,12 +5,11 @@
 !2::ExitApp
 
 
-4::
-toggle := !toggle
+Space::
 countloop = 0
-while (toggle && countloop < 10000) {
-    MouseClick
-    Random, rand, 120, 260
+while (countloop < 2) {
+    MouseClick, Left
+    Random, rand, 150, 226
     Sleep %rand%
     countloop++
 }
