@@ -3,12 +3,11 @@
 !2::ExitApp
 ; All below "scripts" start from the CURRENT mouse position
 
-;#IfWinActive, ahk_exe OpenOSRS.exe
 #IfWinActive, ahk_exe RuneLite.exe
+; Loop through inventory and click all items
     1::
         loopcount = 0
         Click
-        ; Loop through inventory and click all items
         loop, 2{
             loopcount++
             loop, 6 { ;Loop first row
@@ -28,10 +27,10 @@
         }
     Return
 
+; Loop through inventory and click all items but the bottom row
     2::
         loopcount = 0
         Click
-        ; Loop through inventory and click all items but the bottom row
         loop, 2{
             loopcount++
             loop, 5 { ;Loop first row
@@ -51,9 +50,9 @@
         }
     Return
 
+; Loop through inventory and drop (shift click) all items
     3::
         loopcount = 0
-        ; Loop through inventory and drop all items
         Send {Shift down}
         Click
         loop, 2{
@@ -76,9 +75,9 @@
         Send {Shift up}
     Return
 
+; Loop through inventory and drop (shift click) all items but the bottom row
     4::
         loopcount = 0
-        ; Loop through inventory and drop all items but the bottom row
         Send {Shift down}
         Click
         loop, 2{

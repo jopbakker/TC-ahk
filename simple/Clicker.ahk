@@ -17,7 +17,7 @@ while (toggle && countloop < 10000) {
 return
 
 
-5::
+Numpad5::
 toggle := !toggle
 countloop = 0
 while (toggle && countloop < 10000) {

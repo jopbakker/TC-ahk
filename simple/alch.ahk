@@ -4,7 +4,7 @@
 
 !2::ExitApp
 
-
+; 1 click alching with the item to alch "below" the alch icon in the mage book
 Space::
 countloop = 0
 while (countloop < 2) {
