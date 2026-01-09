@@ -28,7 +28,7 @@
     Return
 
 ; Loop through inventory and click all items but the bottom row
-    2::
+    Numpad4::
         loopcount = 0
         Click
         loop, 2{

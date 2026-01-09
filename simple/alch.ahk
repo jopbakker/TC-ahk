@@ -7,9 +7,9 @@
 ; 1 click alching with the item to alch "below" the alch icon in the mage book
 Space::
 countloop = 0
-while (countloop < 2) {
+while (countloop < 5000) {
     MouseClick, Left
-    Random, rand, 150, 226
+    Random, rand, 450, 750
     Sleep %rand%
     countloop++
 }
